@@ -8,6 +8,7 @@ import { PreguntadosComponent } from './page/preguntados/preguntados.component';
 import { MenuComponent } from './page/menu/menu.component';
 import { HomeComponent } from './page/home/home.component';
 import { AboutComponent } from './page/about/about.component';
+import { RegistroComponent } from './page/registro/registro.component';
 
 const routes: Routes = [
 
@@ -21,7 +22,11 @@ const routes: Routes = [
         path: 'about', component:AboutComponent
       },
       {
-        path: 'juegos', component:JuegosComponent
+        path: 'juegos', component:JuegosComponent,
+        children: [
+          {path: 'tateti', component:TatetiComponent},
+          {path: 'preguntados', component:PreguntadosComponent}
+        ]
       }
     ]
   },
@@ -29,18 +34,17 @@ const routes: Routes = [
     path: 'login', component: LoginComponent
   },
   {
-    path: 'menu', component: MenuComponent,
-
+    path: 'registro', component: RegistroComponent
   },
   {
-    path: 'about', component: AboutComponent
+    path: 'menu', component: MenuComponent
   },
+  // {
+  //   path: 'about', component: AboutComponent
+  // },
   {
     path: 'juegos', component:JuegosComponent,
-    children: [
-      {path: 'tateti', component:TatetiComponent},
-      {path: 'preguntados', component:PreguntadosComponent}
-    ]
+
   },
   {
     path: '**', component:NotFoundComponent

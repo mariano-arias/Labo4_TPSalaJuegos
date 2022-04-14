@@ -12,6 +12,7 @@ import { PreguntadosComponent } from './page/preguntados/preguntados.component';
 import { TatetiComponent } from './page/tateti/tateti.component';
 import { HomeComponent } from './page/home/home.component';
 import { AboutComponent } from './page/about/about.component';
+import { RegistroComponent } from './page/registro/registro.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { AboutComponent } from './page/about/about.component';
     PreguntadosComponent,
     TatetiComponent,
     HomeComponent,
-    AboutComponent
+    AboutComponent,
+    RegistroComponent
   ],
   imports: [
     BrowserModule,

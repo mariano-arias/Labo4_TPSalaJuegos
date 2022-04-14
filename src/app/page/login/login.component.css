@@ -1,7 +1,8 @@
-@import url(http://weloveiconfonts.com/api/?family=entypo);
+ @import url(http://weloveiconfonts.com/api/?family=entypo);
 @import url(https://fonts.googleapis.com/css?family=Roboto);
 
 /* zocial */
+
 [class*="entypo-"]:before {
   font-family: 'entypo', sans-serif;
 }
@@ -14,13 +15,15 @@
   box-sizing: border-box; 
 }
 
-
+a{
+  text-decoration: none;
+}
 h1, h2 {
   color:rgba(255,255,255,.8);
   margin-left:12px;
 }
 
-html, body, h1, h2 {
+html, body, h1, h2{
     width: 100%;
     height: 100%;
     margin: 0;
@@ -114,16 +117,39 @@ html, body, h1, h2 {
     position: absolute;
     bottom: 1.125rem; left: 1.125rem;
   }
-  
-  .fullscreen-bg {
-    position: fixed;
-    z-index: -1;
-    top:0; right:0; bottom:0; left:0;
-    background: url(https://36.media.tumblr.com/3cae448eafe6cdd27c210b4da274cfe7/tumblr_ns9p18pY5a1qzwmsso1_1280.jpg) center;
-    background-size: cover;
-  }
-  
   #toggle--login:checked ~ .form--signup { left:200%; visibility:hidden; }
   #toggle--signup:checked ~ .form--login { left:-100%; visibility:hidden; }
+
+  /* .fullscreen-bg {
+     position: fixed;
+    z-index: -1;
+    top:0; right:0; bottom:0; left:0;
+   background: url(https://36.media.tumblr.com/3cae448eafe6cdd27c210b4da274cfe7/tumblr_ns9p18pY5a1qzwmsso1_1280.jpg) center; 
+    background-size: cover; 
+    
+  }  */
   
-  @media (height:300px){.legal,.photo-cred{display:none}}
+    
+    .animated-background{
+      position: fixed;
+      z-index: -1;
+      top:0; right:0; bottom:0; left:0;
+      background-size: cover; 
+      background: linear-gradient(
+        to right, #833ab4,
+        #b0b933, #1f1301); 
+        background-size: 400% 400%;
+        animation: animate-background 20s infinite ease-in-out;
+      }
+
+@keyframes animate-background {
+    0%{
+        background-position: 0 50%;
+    }
+    50%{
+        background-position: 100% 50%;
+    }
+    100%{
+        background-position: 0 50%;
+    }
+}

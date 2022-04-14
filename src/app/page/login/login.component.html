@@ -1,19 +1,20 @@
 <!-- <form class="form form--login framed"> -->
+  <div class="animated-background">
   <div class="form form--login framed">
 
     <input type="text" placeholder="Name" class="input input--top" [(ngModel)]="user.name"/>
     <input type="password" placeholder="Password" class="input" [(ngModel)]="user.pass"/>
     <input type="button" value="Log in" class="input input--submit"  (click)="Redirigir()"/>
     
-    <label for="toggle--signup" class="text text--small text--centered">New? <b>Sign up</b></label>
+    <label for="toggle--signup" class="text text--small text--centered">New? <a routerLink = "../registro" class="text text--small text--centered"><b>Sign up</b></a></label>
     <!-- </form> -->
   </div>
 
 <div class="legal">
   <a class="text text--small text--border-right" href="#">Laboratorio IV</a>
-  <a class="text text--small text--border-right" href="#">UTN Fra 2022</a>
+  <a class="text text--small text--border-right" href="#">UTN FRA 2022</a>
   <a class="text text--small" href="#">Argentina</a>
 </div>
-
+  </div>
 
 <div class="fullscreen-bg"></div>
