@@ -9,10 +9,11 @@ import { MenuComponent } from './page/menu/menu.component';
 import { JuegosComponent } from './page/juegos/juegos.component';
 import { NotFoundComponent } from './page/not-found/not-found.component';
 import { PreguntadosComponent } from './page/preguntados/preguntados.component';
-import { TatetiComponent } from './page/tateti/tateti.component';
 import { HomeComponent } from './page/home/home.component';
 import { AboutComponent } from './page/about/about.component';
 import { RegistroComponent } from './page/registro/registro.component';
+import { AhorcadoComponent } from './page/juegos/ahorcado/ahorcado.component';
+import { MayormenorComponent } from './page/juegos/mayormenor/mayormenor.component';
 
 @NgModule({
   declarations: [
@@ -22,10 +23,11 @@ import { RegistroComponent } from './page/registro/registro.component';
     JuegosComponent,
     NotFoundComponent,
     PreguntadosComponent,
-    TatetiComponent,
     HomeComponent,
     AboutComponent,
-    RegistroComponent
+    RegistroComponent,
+    AhorcadoComponent,
+    MayormenorComponent
   ],
   imports: [
     BrowserModule,

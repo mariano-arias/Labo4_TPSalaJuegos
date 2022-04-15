@@ -8,8 +8,8 @@
 <section class="carousel">
     <div class="carousel_container">
       <div class="carousel-item">
-        <a routerLink="./tateti">
-          <p class="carousel-item_details--title">Tateti Game</p>
+        <a (click)="ToAhorcado()">
+          <p class="carousel-item_details--title">Ahorcado Game</p>
           <p class="carousel-item_details--subtitle">descripcion</p>
             <img class="carousel-item_img"
           src="https://images.pexels.com/photos/228963/pexels-photo-228963.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
@@ -23,7 +23,7 @@
     </a>
       </div>
       <div class="carousel-item">
-        <a routerLink="./preguntados">
+        <a (click)="ToPreguntados()">
         <p class="carousel-item_details--title">Preguntados</p>
         <p class="carousel-item_details--subtitle">descripcion</p>
         <img class="carousel-item_img"
@@ -39,7 +39,8 @@
     </a>
       </div>
       <div class="carousel-item">
-        <p class="carousel-item_details--title">Super Mario Bros</p>
+        <a (click)="ToMayorMenor()">
+        <p class="carousel-item_details--title">Mayor o Menor</p>
         <p class="carousel-item_details--subtitle">dscripcion</p>
         <img class="carousel-item_img"
           src="https://images.pexels.com/photos/163036/mario-luigi-yoschi-figures-163036.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
@@ -49,8 +50,8 @@
             <img src="" alt="">
             <img src="" alt="">
           </div>
-        
         </div>
+      </a>
       </div>
       <div class="carousel-item">
         <p class="carousel-item_details--title">Pacman</p>
