@@ -16,7 +16,7 @@ export class LoginComponent {
   title = 'Laboratorio IV 2022';
 
   nombre : string="";
-  clave: string = "";
+  pass: string = "";
 
   user = new Usuario();
   Redirigir(){
