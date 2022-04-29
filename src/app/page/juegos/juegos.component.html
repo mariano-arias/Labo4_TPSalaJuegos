@@ -1,4 +1,3 @@
-
 <!-- <ul>
     <li><a routerLink="./tateti">Juego tateti</a></li>
     <li><a routerLink="./preguntados">Juego Preguntados</a> </li>
@@ -6,24 +5,24 @@
 </ul> -->
 
 <section class="carousel">
-    <div class="carousel_container">
-      <div class="carousel-item">
-        <a (click)="ToAhorcado()">
-          <p class="carousel-item_details--title">Ahorcado Game</p>
-          <p class="carousel-item_details--subtitle">descripcion</p>
-            <img class="carousel-item_img"
+  <div class="carousel_container">
+    <div class="carousel-item">
+      <a (click)="ToAhorcado()">
+        <p class="carousel-item_details--title">Ahorcado Game</p>
+        <p class="carousel-item_details--subtitle">descripcion</p>
+        <img class="carousel-item_img"
           src="https://images.pexels.com/photos/228963/pexels-photo-228963.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
           alt="Tateti">
-            <div class="carousel-item_details">
-                <div>
+        <div class="carousel-item_details">
+          <div>
             <img src="" alt="">
             <img src="" alt="">
           </div>
         </div>
-    </a>
-      </div>
-      <div class="carousel-item">
-        <a (click)="ToPreguntados()">
+      </a>
+    </div>
+    <div class="carousel-item">
+      <a (click)="ToPreguntados()">
         <p class="carousel-item_details--title">Preguntados</p>
         <p class="carousel-item_details--subtitle">descripcion</p>
         <img class="carousel-item_img"
@@ -34,12 +33,12 @@
             <img src="" alt="">
             <img src="" alt="">
           </div>
-          
+
         </div>
-    </a>
-      </div>
-      <div class="carousel-item">
-        <a (click)="ToMayorMenor()">
+      </a>
+    </div>
+    <div class="carousel-item">
+      <a (click)="ToMayorMenor()">
         <p class="carousel-item_details--title">Mayor o Menor</p>
         <p class="carousel-item_details--subtitle">dscripcion</p>
         <img class="carousel-item_img"
@@ -52,36 +51,23 @@
           </div>
         </div>
       </a>
-      </div>
-      <div class="carousel-item">
-        <p class="carousel-item_details--title">Pacman</p>
-        <p class="carousel-item_details--subtitle">dscripcion</p>
-        <img class="carousel-item_img"
-          src="https://images.pexels.com/photos/1601774/pexels-photo-1601774.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
-          alt="">
-        <div class="carousel-item_details">
-          <div>
-            <img src="" alt="">
-            <img src="" alt="">
-          </div>
-          
-        </div>
-      </div>
-      <div class="carousel-item">
-        <p class="carousel-item_details--title">Generala</p>
-        <p class="carousel-item_details--subtitle">dscripcion</p>
-        <img class="carousel-item_img"
-          src="https://images.pexels.com/photos/37534/cube-six-gambling-play-37534.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260"
-          alt="">
-        <div class="carousel-item_details">
-          <div>
-            <img src="" alt="">
-            <img src="" alt="">
-          </div>
-     
-        </div>
-      </div>
-      
+
     </div>
-  </section>
+    <div class="carousel-item">
+      <p class="carousel-item_details--title">Generala</p>
+      <p class="carousel-item_details--subtitle">dscripcion</p>
+      <img class="carousel-item_img"
+        src="https://images.pexels.com/photos/37534/cube-six-gambling-play-37534.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260"
+        alt="">
+      <!-- <div class="carousel-item_details">
+        <div>
+          <img src="" alt="">
+          <img src="" alt="">
+        </div>
+
+      </div> -->
+    </div>
+
+  </div>
+</section>
 <router-outlet></router-outlet>
