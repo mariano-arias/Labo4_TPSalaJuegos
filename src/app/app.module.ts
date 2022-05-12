@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -13,6 +13,15 @@ import { AboutComponent } from './page/about/about.component';
 import { RegistroComponent } from './page/registro/registro.component';
 import { AhorcadoComponent } from './page/juegos/ahorcado/ahorcado.component';
 import { MayormenorComponent } from './page/juegos/mayormenor/mayormenor.component';
+import { ForoComponent } from './page/foro/foro.component';
+
+import { AngularFireModule } from '@angular/fire/compat';
+import { AngularFireAuthModule } from '@angular/fire/compat/auth';
+import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
+
+import { environment } from '../environments/environment';
+import { ForoPostComponent } from './page/foro-post/foro-post.component';
+
 
 @NgModule({
   declarations: [
@@ -26,12 +35,18 @@ import { MayormenorComponent } from './page/juegos/mayormenor/mayormenor.compone
     AboutComponent,
     RegistroComponent,
     AhorcadoComponent,
-    MayormenorComponent
+    MayormenorComponent,
+    ForoComponent,
+    ForoPostComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule,
+    AngularFireModule.initializeApp(environment.firebaseConfig),
+    AngularFireAuthModule,
+    AngularFirestoreModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -10,6 +10,7 @@ import { AboutComponent } from './page/about/about.component';
 import { RegistroComponent } from './page/registro/registro.component';
 import { AhorcadoComponent } from './page/juegos/ahorcado/ahorcado.component';
 import { MayormenorComponent } from './page/juegos/mayormenor/mayormenor.component';
+import { ForoComponent } from './page/foro/foro.component';
 
 const routes: Routes = [
 
@@ -28,6 +29,9 @@ const routes: Routes = [
           {path: 'ahorcado', component:AhorcadoComponent},
           {path: 'preguntados', component:PreguntadosComponent}
         ]
+      },
+      {
+        path: 'foro', component:ForoComponent
       }
     ]
   },
@@ -51,7 +55,6 @@ const routes: Routes = [
   },
   {
     path: 'juegos', component:JuegosComponent,
-
   },
   {
     path: '**', component:NotFoundComponent

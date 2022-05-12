@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Usuario } from 'src/app/Entidades/Usuario';
+import { LoginService } from 'src/app/services/login.service';
+
 
 @Component({
   selector: 'app-registro',
@@ -9,19 +10,32 @@ import { Usuario } from 'src/app/Entidades/Usuario';
 
 export class RegistroComponent implements OnInit {
 
-  passwordBis: string = "";
+//user: Usuario =  new Usuario();
 
-  constructor() { }
+usuario = {
+  mail : '',
+  password: ''
+}
+  constructor(private authService : LoginService) { }
 
   ngOnInit(): void {
   }
 
-  user =  new Usuario();
+
   Registrarse(){
-    if(this.user.password && this.passwordBis){
-      return true;
-    }else{
-      return "algo";
+    const {mail, password} = this.usuario;
+    try{
+console.log(this.usuario);
+
+    this.authService.register (mail, password).then( res=>{
+          console.log("registro de usuario ok",res);
+        })
+        
+      }
+    catch{
+      console.log("hay error");
+      
     }
   }
+
 }

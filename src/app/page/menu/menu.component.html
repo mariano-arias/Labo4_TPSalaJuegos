@@ -12,14 +12,40 @@
           <a class="nav-link link" href="#">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link link" routerLink="./juegos">Juegos</a>
+          <a class="nav-link link" routerLink="./juegos"  *ngIf="usuarioLogueado | async as user;">Juegos</a>
         </li>
+        <li class="nav-item">
+          <a class="nav-link link" routerLink="./foro" *ngIf="usuarioLogueado | async as user;">Foro</a>
+      </li>
         <li class="nav-item">
             <a class="nav-link link" routerLink="./about">QuienSoy</a>
           </li>
-          <li class="nav-item">
+          <!-- <li class="nav-item">
             <a class="nav-link link" routerLink="/login">Login</a>
+        </li> -->
+        <li>
+
+          <div ngbDropdown class="d-inline-block"  *ngIf="usuarioLogueado | async as user; else LoginButton">
+            <!-- <button class="btn btn-outline-primary" id="dropdownBasic1" ngbDropdownToggle> -->
+              <!-- <img style="border-radius: 100%;" *ngIf="user.photoURL" src="{{user.photoURL}}" width="30" height="30"  -->
+              <!-- class="d-inline-block align-top" alt=""> -->
+              {{user.email}}
+            <!-- </button> -->
+          </div>
+          </li>
+          <li>
+            <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+              
+              <button ngbDropdownItem routerLink="/login" (click)="desloguear()">Salir</button>
+            </div>
+          
         </li>
+  
+  
+      <ng-template #LoginButton>
+          <!-- <button class="btn btn-primary" routerLink="/login"> Ingresar</button> -->
+          <li class="btn btn-primary" routerLink="/login"> Ingresar</li>
+      </ng-template>
         <!-- <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" 
              data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">

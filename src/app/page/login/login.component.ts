@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Usuario } from 'src/app/Entidades/Usuario';
+import { LoginService } from 'src/app/services/login.service';
 
 @Component({
   selector: 'app-login',
@@ -9,16 +10,36 @@ import { Usuario } from 'src/app/Entidades/Usuario';
 })
 export class LoginComponent {
 
-  constructor( public ruteo : Router) {
+  title = 'Laboratorio IV 2022';
+
+  
+  usuario = {
+    mail : '',
+    password: ''
+  }
+
+  constructor( public ruteo : Router, private authService : LoginService) {
    }
 
 
-  title = 'Laboratorio IV 2022';
+  Ingresar(){
+    console.log(this.usuario);
 
-  nombre : string="";
-  pass: string = "";
+    const {mail, password} = this.usuario;
+    try{
 
-  user = new Usuario();
+    this.authService.login (mail, password).then( res=>{
+          console.log("entroooo",res);
+        });
+        this.Redirigir();
+        
+      }
+    catch{
+      console.log("hay error");
+      
+    }
+  }
+
   Redirigir(){
     this.ruteo.navigateByUrl('home');
 }

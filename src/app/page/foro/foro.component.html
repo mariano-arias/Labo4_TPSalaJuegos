@@ -1,0 +1,21 @@
+
+<app-foro-post></app-foro-post>
+
+
+<table class="table table-hover table-striped">
+    <thead class="bg-gradient text-white">
+      <tr>        
+        <th>Title</th>
+        <th>Content</th>
+        <th>Author</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let post of ForoPosts">        
+        <td>{{ post.title }}</td>
+        <td>{{ post.content }}</td>
+        <td>{{ post.author }}</td>
+       
+      </tr>
+    </tbody>
+  </table>
