@@ -23,23 +23,23 @@
           <!-- <li class="nav-item">
             <a class="nav-link link" routerLink="/login">Login</a>
         </li> -->
-        <li>
-
-          <div ngbDropdown class="d-inline-block"  *ngIf="usuarioLogueado | async as user; else LoginButton">
+        
+        <div ngbDropdown class="d-inline-block"  *ngIf="usuarioLogueado | async as user; else LoginButton">
+            <li>
             <!-- <button class="btn btn-outline-primary" id="dropdownBasic1" ngbDropdownToggle> -->
               <!-- <img style="border-radius: 100%;" *ngIf="user.photoURL" src="{{user.photoURL}}" width="30" height="30"  -->
               <!-- class="d-inline-block align-top" alt=""> -->
               {{user.email}}
             <!-- </button> -->
-          </div>
           </li>
           <li>
             <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
               
               <button ngbDropdownItem routerLink="/login" (click)="desloguear()">Salir</button>
             </div>
-          
-        </li>
+            
+          </li>
+        </div>
   
   
       <ng-template #LoginButton>
